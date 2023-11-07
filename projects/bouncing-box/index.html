@@ -48,6 +48,7 @@
 			box.on('click', handleBoxClick);
 			function handleBoxClick() {
 				positionX = 0
+
 			}
 
 			// moves the Box to a new position on the screen along the X-Axis
@@ -67,7 +68,7 @@
 			// TODO 2 - Variable declarations 
 			var positionX = 0;
 			var points = 0;
-			var speed = 30;
+			var speed = 10;
 			var points = 0;
 
 			
@@ -78,9 +79,11 @@
 			*/
 			function update() {
 				/* Your Code to Increase positionX by 10 HERE */
+				positionX = positionX + speed;
 				moveBoxTo(positionX)
-				positionX = positionX + 10;
-				var speed = 10;
+				if(positionX>boardWidth){
+					//box chnages direction//
+				}
 			};
 			/* 
 			This Function will be called each time the box is clicked. Each time it is called,
@@ -91,7 +94,7 @@
 				positionX = 0;
 				
 				points = points + 1;
-				
+				speed= speed + 3;
 				changeBoxText(points);
 
 
