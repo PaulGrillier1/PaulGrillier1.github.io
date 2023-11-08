@@ -82,7 +82,10 @@
 				positionX = positionX + speed;
 				moveBoxTo(positionX)
 				if(positionX>boardWidth){
-					//box chnages direction//
+				speed=-speed
+				}
+				if(positionX<0){
+					speed=-speed
 				}
 			};
 			/* 
